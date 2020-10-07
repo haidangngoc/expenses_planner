@@ -103,10 +103,18 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Card(
-              child: Text('CHART!'),
+              color: Colors.blue,
+              child: Container(
+                width: double.infinity,
+                child: Text('CHART!'),
+              ),
+              elevation: 5,
             ),
-            Card(
-              child: Text('List of TX!'),
+            Container(
+              width: double.infinity,
+              child: Card(
+                child: Text('List of TX!'),
+              ),
             ),
           ],
         ),
