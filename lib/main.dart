@@ -100,7 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Card(
               color: Colors.blue,
@@ -113,6 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               width: double.infinity,
               child: Card(
+                color: Colors.red,
                 child: Text('List of TX!'),
               ),
             ),
