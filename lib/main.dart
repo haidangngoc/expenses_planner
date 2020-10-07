@@ -122,8 +122,19 @@ class _MyHomePageState extends State<MyHomePage> {
             Card(
               color: Colors.blue,
               child: Container(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 15,
+                ),
                 width: double.infinity,
                 child: Text('CHART!'),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2,
+                  ),
+                ),
+                padding: EdgeInsets.all(10),
               ),
               elevation: 5,
             ),
@@ -133,6 +144,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Row(
                     children: <Widget>[
                       Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: 10,
+                          vertical: 15,
+                        ),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 2,
+                          ),
+                        ),
+                        padding: EdgeInsets.all(10),
                         child: Text(
                           tx.amount.toString(),
                         ),
