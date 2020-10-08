@@ -117,7 +117,8 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Card(
@@ -138,6 +139,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.all(10),
               ),
               elevation: 5,
+            ),
+            Card(
+              elevation: 5,
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: <Widget>[
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Title'),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Amount'),
+                    ),
+                    FlatButton(
+                      onPressed: () {},
+                      textColor: Colors.purple,
+                      child: Text('Add Transaction'),
+                    ),
+                  ],
+                ),
+              ),
             ),
             Column(
               children: transactions.map((tx) {
