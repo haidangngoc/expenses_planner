@@ -85,6 +85,11 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  // String titleInput;
+  // String amountInput;
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -149,12 +154,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     TextField(
                       decoration: InputDecoration(labelText: 'Title'),
+                      controller: titleController,
+                      // onChanged: (val) {
+                      //   titleInput = val;
+                      // },
                     ),
                     TextField(
                       decoration: InputDecoration(labelText: 'Amount'),
+                      controller: amountController,
+                      // onChanged: (val) => amountInput = val,
                     ),
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        print(titleController.text);
+                      },
                       textColor: Colors.purple,
                       child: Text('Add Transaction'),
                     ),
